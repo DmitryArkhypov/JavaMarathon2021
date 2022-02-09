@@ -5,7 +5,7 @@ public class Task1 {
         Car car1 = new Car();
         car1.setModel("BMW");
         car1.setColor("red");
-        car1.setYear(2022);
+        car1.setYear(2020);
         System.out.println(car1.getModel());
         System.out.println(car1.getColor());
         System.out.println(car1.getYear());
