@@ -5,15 +5,14 @@ import java.util.Random;
 public class Teacher {
     private String name;
     private String subject;
-    private String grade;
 
     Teacher(String name, String subject){
     this.name = name;
     this.subject = subject;
     }
-    public void evaluate(String studentName){
+    public void evaluate(Student student){
         Random r = new Random();
-
+        String grade = "";
         switch ((r.nextInt(4) + 2)) {
             case 2: {
                 grade = "неудовлетворительно";
@@ -33,7 +32,7 @@ public class Teacher {
             }
         }
 
-        System.out.println("Преподаватель " + this.name + " оценил студента с именем " + studentName +
+        System.out.println("Преподаватель " + this.name + " оценил студента с именем " + student.getName() +
                 " по предмету " + this.subject + " на оценку " + grade);
     }
 

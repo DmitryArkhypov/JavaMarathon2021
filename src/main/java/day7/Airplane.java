@@ -5,13 +5,14 @@ public class Airplane {
     private int year;
     private int length;
     private int weight;
-    private int fuel = 0;
+    private int fuel;
 
     public Airplane(String manufacturer, int year, int length, int weight) {
         this.manufacturer = manufacturer;
         this.year = year;
         this.length = length;
         this.weight = weight;
+        this.fuel = 0;
     }
 
     // Methods
@@ -30,14 +31,15 @@ public class Airplane {
     }
 
     public static void compareAirplanes(Airplane airplaneA, Airplane airplaneB) {
-        if (airplaneA.length > airplaneB.length){
+        if (airplaneA.getLength() > airplaneB.getLength()){
             System.out.println("The first airplane is longer.");
-        } else if (airplaneA.length < airplaneB.length){
+        } else if (airplaneA.getLength() < airplaneB.getLength()){
             System.out.println("The second airplane is longer.");
-        } else if (airplaneA.length == airplaneB.length){
+        } else if (airplaneA.getLength() == airplaneB.getLength()){
             System.out.println("Airplanes are equal.");
         }
     }
+
 
 
     // seters and geters
@@ -51,6 +53,10 @@ public class Airplane {
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    public int getLength() {
+        return length;
     }
 
     public void setWeight(int weight) {
