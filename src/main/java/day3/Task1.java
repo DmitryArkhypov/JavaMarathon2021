@@ -9,7 +9,7 @@ public class Task1 {
         while (true) {
             System.out.println("Введи город:");
             String city = in.nextLine();
-            if (city.equals("Стоп") || city.equals("стоп")){
+            if (city.equalsIgnoreCase("стоп")){
                 System.out.println("СТОП");
                 break;
             }

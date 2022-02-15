@@ -26,7 +26,7 @@ public class Teacher {
                 grade = "хорошо";
                 break;
             }
-            case 5: {
+            default: {
                 grade = "отлично";
                 break;
             }

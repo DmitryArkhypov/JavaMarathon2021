@@ -5,15 +5,17 @@ public class Airplane {
     private int year;
     private int length;
     private int weight;
-    private int fuel = 0;
+    private int fuel;
 
     public Airplane(String manufacturer, int year, int length, int weight) {
         this.manufacturer = manufacturer;
         this.year = year;
         this.length = length;
         this.weight = weight;
+        this.fuel = 0;
     }
 
+    // setters and getters
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
@@ -38,17 +40,13 @@ public class Airplane {
         return fuel;
     }
 
+    // Methods
     public void info(){
         System.out.printf("Изготовитель: %s, год выпуска: %d, длина: %d, вес: %d, количество топлива в баке: %d \n",
                 this.manufacturer, this.year, this.length, this.weight, this.fuel);
-//        System.out.println("Изготовитель: " + this.manufacturer +
-//                        ", год выпуска: " + this.year +
-//                        ", длина: " + this.length + ", вес: " + this.weight +
-//                        ", количество топлива в баке: " + this.fuel);
     }
 
-    public int fillUp(int n){
-        this.fuel += n;
-        return fuel;
+    public void fillUp(int n){
+        fuel += n;
     }
 }
