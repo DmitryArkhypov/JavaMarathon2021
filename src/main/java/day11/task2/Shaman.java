@@ -3,6 +3,7 @@ package day11.task2;
 public class Shaman extends Hero implements PhysAttack, MagicAttack, Healer {
     int healHims;
     int healTeam;
+    int magicAtt;
 
     public Shaman() {
         physDef = 0.2;
